@@ -3,116 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HabitSaver - 使用条款</title>
+    <title>HabitSaver - Terms of Use / 使用条款</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
+            line-height: 1.6; color: #333; background-color: #f5f5f5; padding: 20px;
         }
-        
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 800px; margin: 0 auto; background: white; padding: 40px;
+            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-            font-size: 28px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        h3 {
-            color: #555;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .last-updated {
-            color: #7f8c8d;
-            font-size: 14px;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        
-        .contact-info {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        
-        .contact-info p {
-            margin-bottom: 5px;
-        }
-        
+        h1 { color: #2c3e50; margin-bottom: 12px; font-size: 28px; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; margin-bottom: 15px; font-size: 22px; }
+        h3 { color: #555; margin-top: 20px; margin-bottom: 10px; font-size: 18px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-left: 30px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .last-updated { color: #7f8c8d; font-size: 14px; margin-bottom: 20px; font-style: italic; }
+        .contact-info { background-color: #ecf0f1; padding: 20px; border-radius: 5px; margin-top: 30px; }
+        .contact-info p { margin-bottom: 5px; }
         .warning {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background-color: #fff3cd; border-left: 4px solid #ffc107;
+            padding: 15px; margin: 20px 0; border-radius: 4px;
         }
-        
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            border: 1px solid #3498db;
+            background: #fff;
+            color: #3498db;
+            border-radius: 16px;
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .lang-switch button[aria-pressed="true"] {
+            background: #3498db;
+            color: #fff;
+        }
+        .lang-panel[hidden] { display: none !important; }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-set-lang="zh">中文</button>
+            <button type="button" data-set-lang="en">English</button>
+        </div>
+
+        <div class="lang-panel" data-lang="zh">
         <h1>HabitSaver 使用条款</h1>
         <p class="last-updated">最后更新时间：2026年11月</p>
-        
         <h2>1. 接受条款</h2>
         <p>欢迎使用 HabitSaver（"本应用"）。通过下载、安装或使用 HabitSaver，您同意遵守本使用条款。如果您不同意这些条款，请不要使用本应用。</p>
-        
         <h2>2. 服务描述</h2>
         <p>HabitSaver 是一款习惯打卡应用（戒掉抽烟咖啡等坏消费，按天累计虚拟省钱并凑奖励），主要在设备本地提供以下功能：</p>
         <ul>
@@ -129,11 +84,9 @@
             <li>忍住打卡：点「我忍住了」记一次，庆祝已省与离下一奖励还差多少</li>
             <li>破戒温柔重启：记录花费与诱因后重启计时，此前累计已省仍然保留</li>
         </ul>
-        
         <h2>3. 使用许可</h2>
         <h3>3.1 许可授予</h3>
         <p>在遵守本使用条款的前提下，我们授予您有限的、非独占的、不可转让的许可，以在您的个人设备上下载、安装和使用 HabitSaver。</p>
-        
         <h3>3.2 使用限制</h3>
         <p>您不得：</p>
         <ul>
@@ -144,7 +97,6 @@
             <li>使用本应用存储或传播非法、有害、威胁、辱骂、骚扰、诽谤、粗俗、淫秽或其他令人反感的内容</li>
             <li>使用本应用侵犯他人的知识产权或隐私权</li>
         </ul>
-        
         <h2>4. 订阅和付费</h2>
         <h3>4.1 订阅服务</h3>
         <p>HabitSaver 提供订阅服务以解锁高级功能，包括但不限于：</p>
@@ -162,32 +114,24 @@
             <li>月度订阅：持续时间 1 个月，参考价 $0.99/month</li>
         </ul>
         <p>免费试用仅适用于年度订阅（7 天），以 App Store 显示为准。</p>
-        
         <h3>4.2 自动续订</h3>
         <p>订阅将自动续订，除非在当前订阅期结束前至少 24 小时取消。您可以通过 Apple ID 设置管理订阅和取消自动续订。取消后，您仍可在当前订阅期内使用高级功能。</p>
-        
         <h3>4.3 退款</h3>
         <p>所有购买均通过 Apple 的 App Store 处理。退款请求应通过 Apple 的退款政策处理。我们无法直接处理退款请求。</p>
-        
         <h2>5. 用户责任</h2>
         <h3>5.1 通知权限（可选）</h3>
         <div class="warning">
             <p><strong>重要提示</strong>：若您开启打卡提醒，HabitSaver 会请求系统通知权限，仅用于按您设定的时间发送本地提醒。您可以在系统设置中随时管理或关闭通知。关闭后不影响本机打卡与统计，仅无法收到提醒。</p>
         </div>
-        
         <h3>5.2 数据备份</h3>
         <p>习惯、打卡、省钱与奖励等数据保存在您的设备本地。强烈建议您通过系统备份（如 iCloud 备份、电脑备份等）定期备份设备。我们不对因设备丢失、损坏、系统故障、卸载应用或用户误操作而导致的数据丢失承担责任，最终备份责任在您。</p>
-        
         <h3>5.3 删除与编辑操作</h3>
         <p>在应用内删除习惯、清空记录或领取奖励等操作可能导致对应本地数据不可恢复，请谨慎操作。我们不对因误删或误操作导致的记录丢失承担责任。</p>
-        
         <h3>5.4 合法使用与健康提示</h3>
         <p>您同意仅将 HabitSaver 用于合法目的，并遵守所有适用的法律法规。本应用提供的省钱金额、连续天数与健康进度等内容仅供自我激励与参考，不构成医疗、财务或专业戒断建议。如需专业帮助，请咨询合格专业人士。</p>
-        
         <h2>6. 知识产权</h2>
         <p>HabitSaver 及其所有内容（包括但不限于文本、图形、徽标、图标、图像、音频剪辑、数字下载）均为我们的财产或我们的许可方的财产，受版权、商标和其他知识产权法保护。</p>
         <p>您在本应用中自行填写的习惯名称、戒因、备注等内容归您所有。本应用仅提供本地追踪工具，不主张对上述用户内容的所有权。</p>
-        
         <h2>7. 免责声明</h2>
         <h3>7.1 服务"按原样"提供</h3>
         <p>HabitSaver 按"现状"和"可用"的基础提供。我们不保证：</p>
@@ -198,7 +142,6 @@
             <li>虚拟省钱、连续天数或健康进度展示在任何情况下均准确无误</li>
             <li>提醒推送在所有设备与系统版本上均准时送达</li>
         </ul>
-        
         <h3>7.2 数据丢失</h3>
         <p>我们不对以下情况导致的数据丢失承担责任：</p>
         <ul>
@@ -209,16 +152,12 @@
             <li>系统更新或升级导致的数据丢失</li>
             <li>第三方服务（如 iCloud 备份）的问题</li>
         </ul>
-        
         <h3>7.3 用户内容与决策</h3>
         <p>您自行输入的习惯信息、花费假设与目标由您负责。基于本应用统计做出的个人决策（含消费、健康相关）由您自行承担风险，我们不对此提供保证。</p>
-        
         <h2>8. 责任限制</h2>
         <p>在法律允许的最大范围内，我们不对任何间接、偶然、特殊、后果性或惩罚性损害承担责任，包括但不限于利润损失、数据丢失或业务中断，无论原因如何。</p>
-        
         <h2>9. 服务变更和终止</h2>
         <p>我们保留随时修改、暂停或终止 HabitSaver 或其任何部分的权利，无论是否事先通知。我们不对因任何此类修改、暂停或终止而导致的任何损失承担责任。如果服务终止，您已购买的功能将根据 Apple 的退款政策处理。</p>
-        
         <h2>10. 第三方服务</h2>
         <p>HabitSaver 使用以下第三方服务：</p>
         <ul>
@@ -226,25 +165,160 @@
             <li><strong>Apple UserNotifications</strong>：在您授权后用于本地打卡提醒</li>
         </ul>
         <p>我们不控制这些第三方服务，不对其内容、隐私政策或做法负责。使用这些服务需自行承担风险。</p>
-        
         <h2>11. 条款修改</h2>
         <p>我们可能会不时更新本使用条款。重大变更将通过应用内通知或更新应用版本时告知您。继续使用 HabitSaver 即表示您接受更新后的条款。</p>
-        
         <h2>12. 适用法律和争议解决</h2>
         <p>本使用条款受中华人民共和国法律管辖。因本条款引起的或与之相关的任何争议，双方应首先通过友好协商解决；协商不成的，应提交有管辖权的人民法院解决。</p>
-        
         <h2>13. 可分割性</h2>
         <p>如果本使用条款的任何条款被认定为无效或不可执行，其余条款仍将完全有效。</p>
-        
         <h2>14. 联系我们</h2>
         <div class="contact-info">
             <p>如果您对本使用条款有任何疑问，请通过以下方式联系我们：</p>
             <p><strong>邮箱</strong>：piaochensuifeng@gmail.com</p>
         </div>
-        
         <h2>15. 完整协议</h2>
         <p>本使用条款构成您与我们之间关于使用 HabitSaver 的完整协议，并取代所有先前的协议和谅解。</p>
+        </div>
+
+        <div class="lang-panel" data-lang="en" hidden>
+        <h1>HabitSaver Terms of Use</h1>
+        <p class="last-updated">Last updated: November 2026</p>
+        <h2>1. Acceptance</h2>
+        <p>Welcome to HabitSaver (“the app”). By downloading, installing, or using HabitSaver, you agree to these Terms of Use. If you do not agree, do not use the app.</p>
+        <h2>2. Description of the service</h2>
+        <p>HabitSaver is a habit tracking app (Quit costly habits like smoking or coffee, track virtual savings day by day, and put that money toward rewards) that mainly provides the following features on your device:</p>
+        <ul>
+            <li>Today dashboard: View streak days, progress ring, money saved, and next milestone for the focused habit</li>
+            <li>Switch focused habit: Switch among habits, review your reasons, and stay mindful when cravings hit</li>
+            <li>Quick presets: Start from smoking, vaping, coffee, alcohol, takeout, and more with default cost and daily count</li>
+            <li>Custom cost and reasons: Edit name, unit price, daily count, quit date, and reasons, with daily/yearly savings preview</li>
+            <li>Detail and heatmap: See quit duration, health timeline, recent logs, and a monthly heatmap</li>
+            <li>Free limit and membership: Track up to two habits for free; membership unlocks unlimited habits across categories</li>
+            <li>Weekly summary: Review money saved and resisted counts this week versus last week, broken down by habit</li>
+            <li>Savings goals: Set reward names and target amounts, then claim when available savings reach the goal</li>
+            <li>Priority reward: Pick a priority reward so available savings fill it first while others wait</li>
+            <li>Badge wall: Unlock first-habit, streak, and savings milestones and track progress</li>
+            <li>I resisted check-in: Log a resisted craving, celebrate savings, and see how close you are to the next reward</li>
+            <li>Gentle restart after a slip: Log spend and triggers, restart the timer, and keep previously saved totals</li>
+        </ul>
+        <h2>3. License</h2>
+        <h3>3.1 Grant of license</h3>
+        <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to download, install, and use HabitSaver on your personal devices.</p>
+        <h3>3.2 Restrictions</h3>
+        <p>You may not:</p>
+        <ul>
+            <li>Copy, modify, distribute, sell, or lease the app or any part of it</li>
+            <li>Reverse engineer, decompile, or disassemble the app</li>
+            <li>Remove or alter any copyright, trademark, or other proprietary notices</li>
+            <li>Use the app for any unlawful purpose</li>
+            <li>Use the app to store or distribute illegal, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable content</li>
+            <li>Use the app to infringe others’ intellectual property or privacy rights</li>
+        </ul>
+        <h2>4. Subscriptions and payments</h2>
+        <h3>4.1 Subscriptions</h3>
+        <p>HabitSaver offers subscriptions to unlock premium features, including but not limited to:</p>
+        <ul>
+            <li>Today dashboard</li>
+            <li>Switch focused habit</li>
+            <li>Quick presets</li>
+            <li>Custom cost and reasons</li>
+            <li>Detail and heatmap</li>
+            <li>Free limit and membership</li>
+        </ul>
+        <p>Prices may vary by region and are shown in the App Store. Plans include:</p>
+        <ul>
+            <li>Yearly subscription: duration 1 year, reference price $4.99/year (includes a 7-day free trial)</li>
+            <li>Monthly subscription: duration 1 month, reference price $0.99/month</li>
+        </ul>
+        <p>The free trial applies only to Yearly subscription (7 days). Please refer to the App Store listing.</p>
+        <h3>4.2 Auto-renewal</h3>
+        <p>Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period. Manage or cancel auto-renewal in your Apple ID settings. After canceling, you may keep premium access until the current period ends.</p>
+        <h3>4.3 Refunds</h3>
+        <p>All purchases are processed by Apple’s App Store. Refund requests follow Apple’s refund policies. We cannot process refunds directly.</p>
+        <h2>5. Your responsibilities</h2>
+        <h3>5.1 Notification permission (optional)</h3>
+        <div class="warning">
+            <p><strong>Important</strong>: If you enable check-in reminders, HabitSaver may request notification permission only to send local reminders at times you set. You can manage or disable notifications in system settings. Turning them off does not affect on-device check-ins or stats—only reminders.</p>
+        </div>
+        <h3>5.2 Data backup</h3>
+        <p>Habits, check-ins, savings, and rewards are stored on your device. Please back up your device regularly (for example via iCloud or computer backup). We are not responsible for data loss from device loss or damage, system failure, uninstalling the app, or user error; backup remains your responsibility.</p>
+        <h3>5.3 Deletion and edits</h3>
+        <p>Deleting habits, clearing logs, or claiming rewards in the app may make related local data unrecoverable. Please proceed carefully. We are not responsible for loss caused by accidental deletion or mistaken actions.</p>
+        <h3>5.4 Lawful use and wellness notice</h3>
+        <p>You agree to use HabitSaver only for lawful purposes and in compliance with applicable laws. Savings amounts, streaks, and health-style progress are for self-motivation and reference only and are not medical, financial, or professional quitting advice. Seek qualified professionals when needed.</p>
+        <h2>6. Intellectual property</h2>
+        <p>HabitSaver and its content (including text, graphics, logos, icons, images, audio, and downloads) are our property or that of our licensors and are protected by intellectual property laws.</p>
+        <p>Habit names, quit reasons, and notes you enter belong to you. The app is a local tracking tool and does not claim ownership of that user content.</p>
+        <h2>7. Disclaimers</h2>
+        <h3>7.1 “As is”</h3>
+        <p>HabitSaver is provided “as is” and “as available.” We do not warrant that:</p>
+        <ul>
+            <li>The app will meet all of your requirements</li>
+            <li>The app will be uninterrupted, timely, secure, or error-free</li>
+            <li>Any errors will be corrected</li>
+            <li>Virtual savings, streaks, or health-style progress are accurate in every case</li>
+            <li>Reminders will always arrive on time on every device and OS version</li>
+        </ul>
+        <h3>7.2 Data loss</h3>
+        <p>We are not liable for data loss caused by:</p>
+        <ul>
+            <li>Device loss, damage, or theft</li>
+            <li>App deletion or reinstallation</li>
+            <li>System failure or software bugs</li>
+            <li>User error (such as deleting a habit or log by mistake)</li>
+            <li>Data loss after system updates</li>
+            <li>Third-party services (such as iCloud backup)</li>
+        </ul>
+        <h3>7.3 User content and decisions</h3>
+        <p>You are responsible for habit information, cost assumptions, and goals you enter. Personal decisions based on the app’s stats (including spending or health-related choices) are at your own risk.</p>
+        <h2>8. Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential, or punitive damages, including lost profits, data loss, or business interruption, regardless of cause.</p>
+        <h2>9. Changes and termination</h2>
+        <p>We may modify, suspend, or discontinue HabitSaver or any part of it at any time, with or without notice, and are not liable for resulting loss. If the service ends, purchased features follow Apple’s refund policies.</p>
+        <h2>10. Third-party services</h2>
+        <ul>
+            <li><strong>Apple App Store / StoreKit</strong>: Distribution and subscription management</li>
+            <li><strong>Apple UserNotifications</strong>: Local check-in reminders after you grant permission</li>
+        </ul>
+        <p>We do not control these services and are not responsible for their content, privacy practices, or policies. Use them at your own risk.</p>
+        <h2>11. Changes to these Terms</h2>
+        <p>We may update these Terms from time to time. Material changes may be noted in the app or with an app update. Continued use of HabitSaver means you accept the updated Terms.</p>
+        <h2>12. Governing law</h2>
+        <p>These Terms are governed by the laws of the People’s Republic of China. Disputes should first be resolved amicably; otherwise, they may be submitted to a court with jurisdiction.</p>
+        <h2>13. Severability</h2>
+        <p>If any provision is held invalid or unenforceable, the remaining provisions remain in full force.</p>
+        <h2>14. Contact</h2>
+        <div class="contact-info">
+            <p>Questions about these Terms:</p>
+            <p><strong>Email</strong>: piaochensuifeng@gmail.com</p>
+        </div>
+        <h2>15. Entire agreement</h2>
+        <p>These Terms are the entire agreement between you and us regarding use of HabitSaver and supersede prior agreements and understandings.</p>
+        </div>
     </div>
+
+<script>
+(function () {
+  var KEY = "habitsaver-legal-lang";
+  function apply(lang) {
+    document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+    document.querySelectorAll(".lang-panel").forEach(function (el) {
+      el.hidden = el.getAttribute("data-lang") !== lang;
+    });
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === lang ? "true" : "false");
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  var nav = (navigator.language || "zh").toLowerCase();
+  apply(saved || (nav.indexOf("zh") === 0 ? "zh" : "en"));
+  document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+    btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+  });
+})();
+</script>
+
 </body>
 </html>
-

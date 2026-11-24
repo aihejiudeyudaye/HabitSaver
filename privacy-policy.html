@@ -3,129 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HabitSaver - 隐私政策</title>
+    <title>HabitSaver - Privacy Policy / 隐私政策</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
+            line-height: 1.6; color: #333; background-color: #f5f5f5; padding: 20px;
         }
-        
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 800px; margin: 0 auto; background: white; padding: 40px;
+            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-            font-size: 28px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        h3 {
-            color: #555;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .last-updated {
-            color: #7f8c8d;
-            font-size: 14px;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        
-        .contact-info {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        
-        .contact-info p {
-            margin-bottom: 5px;
-        }
-        
+        h1 { color: #2c3e50; margin-bottom: 12px; font-size: 28px; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; margin-bottom: 15px; font-size: 22px; }
+        h3 { color: #555; margin-top: 20px; margin-bottom: 10px; font-size: 18px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-left: 30px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .last-updated { color: #7f8c8d; font-size: 14px; margin-bottom: 20px; font-style: italic; }
+        .contact-info { background-color: #ecf0f1; padding: 20px; border-radius: 5px; margin-top: 30px; }
+        .contact-info p { margin-bottom: 5px; }
         .highlight-box {
-            background-color: #e8f5e9;
-            border-left: 4px solid #4caf50;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background-color: #e8f5e9; border-left: 4px solid #4caf50;
+            padding: 20px; margin: 20px 0; border-radius: 4px;
         }
-        
-        .highlight-box strong {
-            color: #2e7d32;
-            font-size: 18px;
+        .highlight-box strong { color: #2e7d32; font-size: 18px; }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-bottom: 20px;
         }
-        
+        .lang-switch button {
+            border: 1px solid #3498db;
+            background: #fff;
+            color: #3498db;
+            border-radius: 16px;
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .lang-switch button[aria-pressed="true"] {
+            background: #3498db;
+            color: #fff;
+        }
+        .lang-panel[hidden] { display: none !important; }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-set-lang="zh">中文</button>
+            <button type="button" data-set-lang="en">English</button>
+        </div>
+
+        <div class="lang-panel" data-lang="zh">
         <h1>HabitSaver 隐私政策</h1>
         <p class="last-updated">最后更新时间：2026年11月</p>
-        
         <div class="highlight-box">
             <p><strong>重要声明：HabitSaver 是完全本地化的应用</strong></p>
             <p>HabitSaver 是一款完全本地化的习惯打卡应用（戒掉抽烟咖啡等坏消费，按天累计虚拟省钱并凑奖励），<strong>没有后台服务器</strong>。我们<strong>不会收集、记录、存储或传输</strong>您的任何个人信息、使用数据或习惯记录。习惯、打卡、省钱与奖励等数据均保存在您的设备本地。应用内购买功能通过 Apple 的 App Store 处理，我们不会获取任何交易信息。</p>
         </div>
-        
         <h2>1. 引言</h2>
         <p>HabitSaver（"我们"、"我们的"或"本应用"）非常重视您的隐私保护。HabitSaver 是一款完全本地化的习惯打卡应用，没有后台服务器，不会收集、记录或传输您的任何数据。使用 HabitSaver 即表示您同意本隐私政策的条款。</p>
-        
         <h2>2. 重要声明：我们不会收集任何信息</h2>
         <p><strong>HabitSaver 是一个完全本地化的应用，没有后台服务器。</strong>我们不会收集、记录、存储或传输您的任何个人信息或使用数据。</p>
-        
         <h3>2.1 我们不会收集的信息</h3>
         <p>HabitSaver 不会收集以下任何信息：</p>
         <ul>
@@ -137,21 +86,17 @@
             <li>使用统计信息或分析数据</li>
             <li>任何其他个人数据或使用数据</li>
         </ul>
-        
         <h3>2.2 数据完全本地存储</h3>
         <p>您在 HabitSaver 中创建的习惯、忍住/破戒记录、虚拟省钱、奖励目标与徽章进度等<strong>仅存储在您的设备本地</strong>，不会上传到任何服务器，我们无法访问这些数据。应用用于帮助您在本机追踪戒断与省钱进度，不会将上述内容同步到我们的服务器。</p>
-        
         <h2>3. 互联网连接</h2>
         <p>HabitSaver 仅在以下情况下需要互联网连接：</p>
         <ul>
             <li><strong>应用内购买</strong>：订阅和购买功能需要通过 Apple 的 App Store 进行，这是由 Apple 处理的交易过程。</li>
         </ul>
         <p>除了应用内购买外，HabitSaver 不需要互联网连接即可正常使用（打卡、统计、奖励与徽章均在本地完成）。</p>
-        
         <h2>4. 数据存储和安全</h2>
         <h3>4.1 完全本地存储</h3>
         <p><strong>您的习惯与进度数据仅存储在您的设备本地。</strong>我们没有任何业务服务器，因此这些数据不会上传到我们可控的服务器。数据完全由您控制，我们无法访问。卸载应用或清除应用数据可能导致本地记录丢失，请自行备份（如系统备份）。</p>
-        
         <h3>4.2 安全措施</h3>
         <p>为了保护您的本地数据，HabitSaver 采取以下做法：</p>
         <ul>
@@ -160,7 +105,6 @@
             <li><strong>最小权限</strong>：可选请求通知权限，仅用于您设置的打卡提醒</li>
             <li><strong>数据隐私</strong>：我们不会访问、读取或分析您的本机习惯内容</li>
         </ul>
-        
         <h2>5. 第三方服务</h2>
         <h3>5.1 Apple 服务</h3>
         <p>HabitSaver 仅在以下情况下使用 Apple 服务：</p>
@@ -169,13 +113,10 @@
             <li><strong>UserNotifications</strong>：在您授权后，用于本地打卡提醒（通知由系统投递，内容不经过我们的服务器）</li>
         </ul>
         <p>这些服务的使用受 Apple 的隐私政策和服务条款约束。我们不会通过这些服务收集任何用户数据。</p>
-        
         <h3>5.2 无第三方分析服务</h3>
         <p><strong>HabitSaver 不使用任何第三方分析服务。</strong>我们不会追踪您的使用情况，也不会收集任何分析数据。</p>
-        
         <h2>6. 数据共享和披露</h2>
         <p><strong>由于我们不收集任何用户数据，因此不存在数据共享或披露的情况。</strong>您的习惯与进度数据存储在设备本地，完全由您控制。我们不会访问、分析或分享这些内容。</p>
-        
         <h2>7. 您的权利</h2>
         <p>由于所有业务数据都存储在您的设备本地，您对您的数据享有完全的控制权：</p>
         <ul>
@@ -185,19 +126,15 @@
             <li><strong>隐私权</strong>：上述数据不会被收集、记录或传输给任何第三方</li>
             <li><strong>权限管理</strong>：您可以在系统设置中随时撤销通知等权限</li>
         </ul>
-        
         <h2>8. 儿童隐私</h2>
         <p>HabitSaver 不面向 13 岁以下的儿童。由于我们不收集任何个人信息，因此不存在收集儿童信息的情况。所有数据都存储在设备本地，完全由用户控制。</p>
-        
         <h2>9. 隐私政策变更</h2>
         <p>我们可能会不时更新本隐私政策。重大变更将通过应用内通知或更新应用版本时告知您。继续使用 HabitSaver 即表示您接受更新后的隐私政策。</p>
-        
         <h2>10. 联系我们</h2>
         <div class="contact-info">
             <p>如果您对本隐私政策有任何疑问或意见，请通过以下方式联系我们：</p>
             <p><strong>邮箱</strong>：piaochensuifeng@gmail.com</p>
         </div>
-        
         <h2>11. 本地功能与可选权限说明</h2>
         <p>HabitSaver 在设备本地提供以下能力（相关数据均存于本机）：</p>
         <ul>
@@ -209,10 +146,111 @@
             <li><strong>免费额度与会员解锁</strong>：免费最多同时追踪两个习惯，会员不限数量可多品类一起省钱</li>
         </ul>
         <p>若您开启打卡提醒，应用会请求系统通知权限，仅用于按您设定的时间提醒忍住打卡；您可随时在系统设置中关闭通知。我们不会将通知内容或习惯数据发送到我们的服务器。</p>
-        
         <h2>12. 适用法律</h2>
         <p>本隐私政策受中华人民共和国法律管辖。如有争议，应通过友好协商解决；协商不成的，提交有管辖权的人民法院解决。</p>
+        </div>
+
+        <div class="lang-panel" data-lang="en" hidden>
+        <h1>HabitSaver Privacy Policy</h1>
+        <p class="last-updated">Last updated: November 2026</p>
+        <div class="highlight-box">
+            <p><strong>Important: HabitSaver is a fully on-device app</strong></p>
+            <p>HabitSaver is a fully local habit tracking app (Quit costly habits like smoking or coffee, track virtual savings day by day, and put that money toward rewards) with <strong>no backend server</strong>. We <strong>do not collect, record, store, or transmit</strong> your personal information, usage data, or habit records. Habits, check-ins, savings, and rewards stay on your device. In-app purchases are handled by Apple’s App Store; we do not receive your payment details.</p>
+        </div>
+        <h2>1. Introduction</h2>
+        <p>HabitSaver (“we”, “our”, or “the app”) takes your privacy seriously. HabitSaver is a fully local habit tracking app with no backend server and does not collect, record, or transmit your data. By using HabitSaver, you agree to this Privacy Policy.</p>
+        <h2>2. We do not collect information</h2>
+        <p><strong>HabitSaver is fully on-device and has no backend server.</strong> We do not collect, record, store, or transmit your personal information or usage data.</p>
+        <h3>2.1 Information we do not collect</h3>
+        <p>HabitSaver does not collect:</p>
+        <ul>
+            <li>Personal identity information (name, email, phone number, etc.)</li>
+            <li>Habit records, quit reasons, check-ins, savings, or reward data (stored only on device)</li>
+            <li>Location information</li>
+            <li>Contacts</li>
+            <li>Device information for analytics or advertising</li>
+            <li>Usage analytics</li>
+            <li>Any other personal or usage data</li>
+        </ul>
+        <h3>2.2 On-device storage only</h3>
+        <p>Habits, resisted/slip logs, virtual savings, reward goals, and badge progress created in HabitSaver are <strong>stored only on your device</strong>. They are not uploaded to any server we operate, and we cannot access them. The app helps you track quitting and savings locally and does not sync that content to our servers.</p>
+        <h2>3. Internet connection</h2>
+        <p>HabitSaver needs the internet only for:</p>
+        <ul>
+            <li><strong>In-app purchases</strong>: Subscriptions and purchases go through Apple’s App Store.</li>
+        </ul>
+        <p>Aside from in-app purchases, HabitSaver works offline (check-ins, stats, rewards, and badges run on device).</p>
+        <h2>4. Data storage and security</h2>
+        <h3>4.1 Fully local storage</h3>
+        <p><strong>Your habit and progress data stay on your device.</strong> We do not operate a business server for that data. You control it; we cannot access it. Uninstalling the app or clearing app data may erase local records—please back up your device if needed.</p>
+        <h3>4.2 Safeguards</h3>
+        <ul>
+            <li><strong>On-device processing</strong>: Check-ins, savings, rewards, and badges are computed locally</li>
+            <li><strong>No business data upload</strong>: Aside from App Store purchases, we do not send habit or personal data to our servers</li>
+            <li><strong>Minimal permissions</strong>: Optional notification permission only for reminders you enable</li>
+            <li><strong>Privacy</strong>: We do not access, read, or analyze your on-device habit content</li>
+        </ul>
+        <h2>5. Third-party services</h2>
+        <h3>5.1 Apple services</h3>
+        <ul>
+            <li><strong>App Store / StoreKit</strong>: In-app purchases and subscriptions</li>
+            <li><strong>UserNotifications</strong>: After you grant permission, local check-in reminders (delivered by the system; not sent through our servers)</li>
+        </ul>
+        <p>Those services are governed by Apple’s policies. We do not collect user data through them.</p>
+        <h3>5.2 No third-party analytics</h3>
+        <p><strong>HabitSaver does not use third-party analytics.</strong> We do not track your usage or collect analytics data.</p>
+        <h2>6. Sharing and disclosure</h2>
+        <p><strong>Because we do not collect user data, there is nothing to share or disclose.</strong> Your habit and progress data remain on your device under your control.</p>
+        <h2>7. Your rights</h2>
+        <ul>
+            <li><strong>Ownership</strong>: Habit, check-in, and reward data belong to you</li>
+            <li><strong>Access</strong>: View, edit, or delete habits and logs in the app anytime</li>
+            <li><strong>Deletion</strong>: Delete records, habits, or uninstall the app</li>
+            <li><strong>Privacy</strong>: That data is not collected or sent to third parties by us</li>
+            <li><strong>Permissions</strong>: Revoke notification permission in system settings anytime</li>
+        </ul>
+        <h2>8. Children’s privacy</h2>
+        <p>HabitSaver is not directed to children under 13. We do not collect personal information. All data stays on device under the user’s control.</p>
+        <h2>9. Changes</h2>
+        <p>We may update this Privacy Policy from time to time. Material changes may be noted in the app or with an app update. Continued use of HabitSaver means you accept the updated policy.</p>
+        <h2>10. Contact</h2>
+        <div class="contact-info">
+            <p>Questions about this Privacy Policy:</p>
+            <p><strong>Email</strong>: piaochensuifeng@gmail.com</p>
+        </div>
+        <h2>11. On-device features and optional permissions</h2>
+        <p>HabitSaver provides these capabilities on device (related data stays local):</p>
+        <ul>
+['            <li><strong>Today dashboard</strong>: View streak days, progress ring, money saved, and next milestone for the focused habit</li>', '            <li><strong>Switch focused habit</strong>: Switch among habits, review your reasons, and stay mindful when cravings hit</li>', '            <li><strong>Quick presets</strong>: Start from smoking, vaping, coffee, alcohol, takeout, and more with default cost and daily count</li>', '            <li><strong>Custom cost and reasons</strong>: Edit name, unit price, daily count, quit date, and reasons, with daily/yearly savings preview</li>', '            <li><strong>Detail and heatmap</strong>: See quit duration, health timeline, recent logs, and a monthly heatmap</li>', '            <li><strong>Free limit and membership</strong>: Track up to two habits for free; membership unlocks unlimited habits across categories</li>']
+        </ul>
+        <p>If you enable check-in reminders, the app may request notification permission only to remind you at times you set. You can turn notifications off in system settings. We do not send notification content or habit data to our servers.</p>
+        <h2>12. Governing law</h2>
+        <p>This Privacy Policy is governed by the laws of the People’s Republic of China. Disputes should first be resolved amicably; otherwise, they may be submitted to a court with jurisdiction.</p>
+        </div>
     </div>
+
+<script>
+(function () {
+  var KEY = "habitsaver-legal-lang";
+  function apply(lang) {
+    document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+    document.querySelectorAll(".lang-panel").forEach(function (el) {
+      el.hidden = el.getAttribute("data-lang") !== lang;
+    });
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === lang ? "true" : "false");
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  var nav = (navigator.language || "zh").toLowerCase();
+  apply(saved || (nav.indexOf("zh") === 0 ? "zh" : "en"));
+  document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+    btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+  });
+})();
+</script>
+
 </body>
 </html>
-
